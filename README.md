@@ -24,7 +24,7 @@ A testing job should be run for every push to a dev branch: `testing (unit, inte
 Once a PR is opened, the following CI/CD pipeline should be triggered:
 `testing (unit, integration, quality)` -> `build` -> `scan` -> (manual step) `deploy (ECR w/ continuous scan + ECS/EKS)`
 
-The pipeline will have a deployment environment of `staging`, with all the related variables env variables pointing at staging infrastructure (hopefully deployed with Terraform).
+The pipeline will have a deployment environment of `staging`, with all the related env variables pointing at staging infrastructure (hopefully deployed with Terraform).
 
 ### Production
 
