@@ -1,10 +1,10 @@
 # pipeline-challenge
 
-A basic pipeline pulling the ubuntu image and ensuring it is secure before pushing it to ECR. Trivy is used to scan for image vulnerabilities and fails the pipeline if any are found.
+A basic pipeline pulling the ubuntu image and ensuring it is secure before pushing it to ECR. Trivy is used to scan for image vulnerabilities and will fail the pipeline if any are found.
 
 ## Improve Security
 
-- Add as solution to scan containers at runtime
+- Add a solution to scan containers at runtime
 - In general, a minimal base image should be used to reduce attack surface e.g. Chainguard's
 
 ## Versioning
@@ -17,7 +17,7 @@ The following assumes a Blue/Green deployment strategy and an image with some cu
 
 ### Dev branch
 
-Testing should be run for every push to the dev branch: `testing (unit, integration, quality)`. A matrix should be used to run the tests in parallel.
+A testing job should be run for every push to a dev branch: `testing (unit, integration, quality)`. A matrix should be used to run the tests in parallel.
 
 ### Staging
 
