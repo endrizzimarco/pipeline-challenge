@@ -45,6 +45,5 @@ jobs:
           ECR_REPOSITORY: ${{ secrets.CLIENT_NAME }}
           IMAGE_TAG: ${{ env.VERSION_NUMBER }}
         run: 
-          |
-            docker buildx build --platform linux/amd64 -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG-amd --provenance=false --push .
-            docker buildx build --platform linux/arm64 -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG-arm --provenance=false --push .
+          docker buildx build --platform linux/amd64 -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG-amd --provenance=false --push .
+          docker buildx build --platform linux/arm64 -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG-arm --provenance=false --push .
